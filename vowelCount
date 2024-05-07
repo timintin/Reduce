@@ -1,0 +1,29 @@
+function vowelCount(str) {
+    const vowels = 'aeiou';  // Define the vowels we're looking for
+    const vowelCounts = {};  // Initialize an empty object to store the counts
+
+    // Convert the string to lowercase to make the function case insensitive
+    const lowerCaseStr = str.toLowerCase();
+
+    // Loop through each character in the string
+    for (const char of lowerCaseStr) {
+        // Check if the character is a vowel
+        if (vowels.includes(char)) {
+            // If it is, either initialize or increment the count in the object
+            if (vowelCounts[char]) {
+                vowelCounts[char]++;
+            } else {
+                vowelCounts[char] = 1;
+            }
+        }
+    }
+
+    return vowelCounts;  // Return the object with vowel counts
+}
+
+// Example usage:
+console.log(vowelCount('Elie')); // Output: {e: 2, i: 1}
+console.log(vowelCount('Tim')); // Output: {i: 1}
+console.log(vowelCount('Matt')); // Output: {a: 1}
+console.log(vowelCount('hmmm')); // Output: {}
+console.log(vowelCount('I Am awesome and so are you')); // Output: {i: 1, a: 4, e: 3, o: 3, u: 1}
