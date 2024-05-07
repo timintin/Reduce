@@ -1,0 +1,22 @@
+function addKeyAndValue(arr, key, value) {
+    // Iterate over the array and add the key-value pair to each object
+    arr.forEach(obj => {
+        obj[key] = value;
+    });
+    return arr;  // Return the modified array
+}
+
+// Example usage:
+const arr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}];
+const updatedArr = addKeyAndValue(arr, 'title', 'Instructor');
+
+console.log(updatedArr);
+/*
+Output:
+[
+  {name: 'Elie', title: 'Instructor'},
+  {name: 'Tim', title: 'Instructor'},
+  {name: 'Matt', title: 'Instructor'},
+  {name: 'Colt', title: 'Instructor'}
+]
+*/
