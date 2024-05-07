@@ -1,0 +1,8 @@
+function extractValue(arr, key) {
+    return arr.map(item => item[key]);
+}
+
+// Example usage:
+const arr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}];
+const names = extractValue(arr, 'name');
+console.log(names); // Output: ['Elie', 'Tim', 'Matt', 'Colt']
